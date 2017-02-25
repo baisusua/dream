@@ -6,5 +6,7 @@
     "order_info": "/order_info.do",
     "orders_info": "/orders_info.do",
     "order_history":"/order_history.do",
-    "account_records":"/account_records.do"
+    "account_records":"/account_records.do",
+    "api_key":"43d94149-aef6-43af-9e29-6107b6cad340",
+    "secretKey":"8393367714232E7EF9469A5501E2749B"
 }

@@ -24,9 +24,15 @@
   "homepage": "https://github.com/baisusua/dream#readme",
   "devDependencies": {
     "cheerio": "^0.22.0",
+    "cron": "^1.2.1",
     "express": "^4.14.1",
+    "http": "0.0.0",
     "mongoose": "^4.8.4",
+    "rx-node": "^1.0.2",
     "sequelize": "^3.30.2",
     "superagent": "^3.4.4"
+  },
+  "dependencies": {
+    "md5": "^2.2.1"
   }
 }

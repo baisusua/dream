@@ -1,0 +1,10 @@
+{
+    "base": "https://www.okcoin.cn/api/v1",
+    "price": "/ticker.do?symbol=btc_cny",
+    "userinfo": "/userinfo.do",
+    "trade": "/trade.do",
+    "order_info": "/order_info.do",
+    "orders_info": "/orders_info.do",
+    "order_history":"/order_history.do",
+    "account_records":"/account_records.do"
+}

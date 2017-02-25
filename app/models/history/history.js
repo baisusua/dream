@@ -37,10 +37,6 @@ module.exports = function(sequelize, DataTypes) {
     profit:{
         type: DataTypes.FLOAT,
         allowNull: false 
-    },
-    status: {
-      type: DataTypes.STRING,
-      allowNull: false
     }
   }, {
     tableName: 'history'

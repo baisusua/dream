@@ -8,7 +8,7 @@ total账户总价值
 profit总盈利
 */
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   return sequelize.define('account', {
     id: {
       type: DataTypes.INTEGER(11),
@@ -16,30 +16,26 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
-    cost:{
+    cost: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    balance:{
-        type: DataTypes.FLOAT,
-        allowNull: false 
+    balance: {
+      type: DataTypes.FLOAT,
+      allowNull: false
     },
-    funds:{
-        type: DataTypes.FLOAT,
-        allowNull: false 
+    funds: {
+      type: DataTypes.FLOAT,
+      allowNull: false
     },
-     total:{
-        type: DataTypes.FLOAT,
-        allowNull: false 
+    total: {
+      type: DataTypes.FLOAT,
+      allowNull: false
     },
-    profit:{
-        type: DataTypes.FLOAT,
-        allowNull: false 
-    },
-    status: {
-      type: DataTypes.STRING,
+    profit: {
+      type: DataTypes.FLOAT,
       allowNull: false
     }
   }, {

@@ -1,5 +1,4 @@
 var Rx = require('rx');
-var RxNode = require('rx-node');
 
 var $http = require('../../../tools/http/http');
 var $sign = require('../../../tools/sign/sign');
@@ -23,10 +22,11 @@ var InquireUserInfoParameter = {
 }
 var InquireUserInfoConfig = {
     url:InquireUserInfoUrl,
-    type:'post',
+    methods:'post',
     data:$sign(InquireUserInfoParameter,OKCoin.secretKey)
 }
 var InquireUserInfo = $http(InquireUserInfoConfig)
+
 
 module.exports = {
     InquireLastPrice:InquireLastPrice,

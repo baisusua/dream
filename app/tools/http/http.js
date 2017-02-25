@@ -1,10 +1,9 @@
 var request = require('superagent');
 var Rx = require('rx');
 
-
 module.exports = function (config) {
     var httpHelper;
-    if (config.type) {
+    if (config.methods) {
         httpHelper = request
             .post(config.url)
             .set('Content-Type', 'application/x-www-form-urlencoded')

@@ -3,5 +3,6 @@
     "db_name": "test",
     "username": "test",
     "password": "test@test123",
+    "sss":"sss",
     "port": "3306"
 }

@@ -1,26 +1,28 @@
 /*
 每次交易都更新一次
 id数据库id
+name账户名
 cost充值成本（5000）
 balance账户剩余比特币
 funds账户剩余现金
 total账户总价值
 profit总盈利
 */
+var bson = require('bson');
 
 module.exports = function (sequelize, DataTypes) {
   return sequelize.define('account', {
     id: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false,
+      type: DataTypes.STRING(24),
       primaryKey: true,
-      autoIncrement: true
+      defaultValue: bson.ObjectId().toString(),
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     cost: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
+      type: DataTypes.FLOAT,
     },
     balance: {
       type: DataTypes.FLOAT,
@@ -40,5 +42,5 @@ module.exports = function (sequelize, DataTypes) {
     }
   }, {
     tableName: 'account'
-  });
+  })
 };

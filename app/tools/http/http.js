@@ -18,6 +18,6 @@ module.exports = function (config) {
         return Rx.Observable.just(error.data);
     }
     return Rx.Observable.fromPromise(httpHelper).catch(handleError).map((response) => {
-        return response.text;
+        return JSON.parse(response.text);
     });
 }

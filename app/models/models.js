@@ -1,14 +1,14 @@
 var Sequelize = require('sequelize');
 
-var dbStorage = require('../db');
+var dbStorage = require('../db/dbStorage');
 
-var Account = require('../models/account/account');
-var History = require('../models/history/history');
-var Order = require('../models/order/order');
+var Account = require('./account/account');
+var History = require('./history/history');
+var Order = require('./order/order');
 
 
 /*
-导出表Banner实例
+导出表实例
 */
 module.exports={
     account:Account(dbStorage, Sequelize),

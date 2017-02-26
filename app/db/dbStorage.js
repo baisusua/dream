@@ -23,5 +23,4 @@ dbStorage.authenticate()
         console.log(err);
     })
     .done();
-
 module.exports = dbStorage;

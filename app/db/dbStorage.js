@@ -13,16 +13,16 @@ var dbStorage = new Sequelize(config.db_name, config.username, config.password, 
     },
     define: {
         underscored: true
-    }
+    },
+    // logging(){},
 });
 
 dbStorage.authenticate()
     .then(function () {
-        $logger.writeInfo('数据库连接成功!');
+        $logger.helper.writeInfo('数据库连接成功!');
     })
     .catch(function (err) {
-        console.log(err);
-        $logger.writeErr(err);
+        $logger.helper.writeErr(err);
     })
     .done();
 module.exports = dbStorage;

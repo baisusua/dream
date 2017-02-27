@@ -47,6 +47,6 @@ function InquireOrderHistory (status,current_page,page_length) {
 }
 
 module.exports = {
-    InquireOrderInfo:'InquireOrderInfo',
-    InquireOrderHistory:'InquireOrderHistory'
+    InquireOrderInfo:InquireOrderInfo,
+    InquireOrderHistory:InquireOrderHistory
 }

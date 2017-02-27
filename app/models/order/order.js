@@ -18,13 +18,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     order:{
       type: DataTypes.FLOAT,
-      allowNull: false
+      allowNull: true
     },
     value: {
       type: DataTypes.FLOAT,
       allowNull: false
     },
-     cost:{
+    cost:{
         type: DataTypes.FLOAT,
         allowNull: false 
     },

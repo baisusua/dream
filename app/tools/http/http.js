@@ -16,7 +16,7 @@ module.exports = function (config) {
     }
 
     var handleError = function (error) {
-        $logger.writeErr('数据库连接成功!');
+        $logger.helper.writeErr(error);
         return Rx.Observable.just(error);
     }
     return Rx.Observable.fromPromise(httpHelper).catch(handleError).map((response) => {

@@ -1,4 +1,5 @@
 var request = require('superagent');
+var $logger = require('../../tools/logs/logHelper');
 var Rx = require('rx');
 
 module.exports = function (config) {
@@ -15,7 +16,8 @@ module.exports = function (config) {
     }
 
     var handleError = function (error) {
-        return Rx.Observable.just(error.data);
+        $logger.writeErr('数据库连接成功!');
+        return Rx.Observable.just(error);
     }
     return Rx.Observable.fromPromise(httpHelper).catch(handleError).map((response) => {
         return JSON.parse(response.text);

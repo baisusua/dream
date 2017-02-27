@@ -1,4 +1,5 @@
 var Sequelize = require('sequelize');
+var $logger = require('../tools/logs/logHelper');
 var config = require('../config/db.json');
 
 var dbStorage = new Sequelize(config.db_name, config.username, config.password, {
@@ -17,10 +18,11 @@ var dbStorage = new Sequelize(config.db_name, config.username, config.password, 
 
 dbStorage.authenticate()
     .then(function () {
-        console.log("数据库连接成功! ");
+        $logger.writeInfo('数据库连接成功!');
     })
     .catch(function (err) {
         console.log(err);
+        $logger.writeErr(err);
     })
     .done();
 module.exports = dbStorage;
